@@ -23,17 +23,26 @@ function ExpenseForm() {
     enteredDate: "",
   });
   function titleChangeHandler(event) {
-    setUserInput({ ...userinput, enteredTitle: event.target.value });
+    // setUserInput({ ...userinput, enteredTitle: event.target.value });
+    setUserInput((prevState) => {
+      return { ...prevState, enteredTitle: event.target.value };
+    });
     console.log(userinput);
   }
 
   function amountChangeHandler(event) {
-    setUserInput({ ...userinput, enteredAmount: event.target.value });
+    // setUserInput({ ...userinput, enteredAmount: event.target.value });
+    setUserInput((prevState) => {
+      return { ...prevState, enteredAmount: event.target.value };
+    });
     console.log(userinput);
   }
 
   function dateChangeHandler(event) {
-    setUserInput({ ...userinput, enteredDate: event.target.value });
+    // setUserInput({ ...userinput, enteredDate: event.target.value });
+    setUserInput((prevState) => {
+      return { ...prevState, enteredDate: event.target.value };
+    });
     console.log(userinput);
   }
   return (
