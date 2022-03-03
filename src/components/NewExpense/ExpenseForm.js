@@ -2,49 +2,49 @@ import { useState } from "react";
 import "./ExpenseForm.css";
 
 function ExpenseForm() {
-  //   const [enteredTitle, setEnteredTitle] = useState("");
-  //   function titleChangeHandler(event) {
-  //     setEnteredTitle(event.target.value);
-  //     console.log(enteredTitle);
-  //   }
-  //   const [enteredAmount, setEnteredAmount] = useState("");
-  //   function amountChangeHandler(event) {
-  //     setEnteredAmount(event.target.value);
-  //     console.log(enteredAmount);
-  //   }
-  //   const [enteredDate, setEnteredDate] = useState("");
-  //   function dateChangeHandler(event) {
-  //     setEnteredDate(event.target.value);
-  //     console.log(enteredDate);
-  //   }
-  const [userinput, setUserInput] = useState({
-    enteredTitle: "",
-    enteredAmount: "",
-    enteredDate: "",
-  });
+  const [enteredTitle, setEnteredTitle] = useState("");
   function titleChangeHandler(event) {
-    // setUserInput({ ...userinput, enteredTitle: event.target.value });
-    setUserInput((prevState) => {
-      return { ...prevState, enteredTitle: event.target.value };
-    });
-    console.log(userinput);
+    setEnteredTitle(event.target.value);
+    console.log(enteredTitle);
   }
-
+  const [enteredAmount, setEnteredAmount] = useState("");
   function amountChangeHandler(event) {
-    // setUserInput({ ...userinput, enteredAmount: event.target.value });
-    setUserInput((prevState) => {
-      return { ...prevState, enteredAmount: event.target.value };
-    });
-    console.log(userinput);
+    setEnteredAmount(event.target.value);
+    console.log(enteredAmount);
   }
-
+  const [enteredDate, setEnteredDate] = useState("");
   function dateChangeHandler(event) {
-    // setUserInput({ ...userinput, enteredDate: event.target.value });
-    setUserInput((prevState) => {
-      return { ...prevState, enteredDate: event.target.value };
-    });
-    console.log(userinput);
+    setEnteredDate(event.target.value);
+    console.log(enteredDate);
   }
+  //   const [userinput, setUserInput] = useState({
+  //     enteredTitle: "",
+  //     enteredAmount: "",
+  //     enteredDate: "",
+  //   });
+  //   function titleChangeHandler(event) {
+  //     // setUserInput({ ...userinput, enteredTitle: event.target.value });
+  //     setUserInput((prevState) => {
+  //       return { ...prevState, enteredTitle: event.target.value };
+  //     });
+  //     console.log(userinput);
+  //   }
+
+  //   function amountChangeHandler(event) {
+  //     // setUserInput({ ...userinput, enteredAmount: event.target.value });
+  //     setUserInput((prevState) => {
+  //       return { ...prevState, enteredAmount: event.target.value };
+  //     });
+  //     console.log(userinput);
+  //   }
+
+  //   function dateChangeHandler(event) {
+  //     // setUserInput({ ...userinput, enteredDate: event.target.value });
+  //     setUserInput((prevState) => {
+  //       return { ...prevState, enteredDate: event.target.value };
+  //     });
+  //     console.log(userinput);
+  //   }
   return (
     <form>
       <div className="new-expense__controls">
